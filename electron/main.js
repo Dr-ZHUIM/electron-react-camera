@@ -1,7 +1,8 @@
 const {
   app,
   BrowserWindow,
-  ipcMain,Menu
+  ipcMain,
+  Menu
 } = require('electron')
 const path = require('path');
 const mode = process.argv[2];
@@ -15,16 +16,16 @@ app.whenReady().then(() => {
   const mainWindow = new BrowserWindow({
     width: 300,
     height: 300,
-    minWidth:250,
-    minHeight:250,
-    maxWidth:500,
-    maxHeight:500,
-    x:1500,
-    y:100,
-    transparent:true,
-    hasShadow:true,
+    minWidth: 250,
+    minHeight: 250,
+    maxWidth: 500,
+    maxHeight: 500,
+    x: 1500,
+    y: 100,
+    transparent: true,
+    hasShadow: true,
     frame: false,
-    alwaysOnTop:true,
+    alwaysOnTop: true,
     webPreferences: {
       preload: path.join(__dirname, './preload.js'),
       nodeIntegration: true
